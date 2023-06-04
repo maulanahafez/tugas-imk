@@ -125,7 +125,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    href="./bank-materi/"
+                    href="../bank-materi/"
                   >
                     Bank Materi
                   </a>
@@ -133,7 +133,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    href="./bank-soal/"
+                    href="../bank-soal/"
                   >
                     Bank Soal
                   </a>
@@ -141,7 +141,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    href="./jadwal/"
+                    href="../jadwal/"
                   >
                     Jadwal
                   </a>
@@ -149,7 +149,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    href="./reviews/"
+                    href="../reviews/"
                   >
                     Feedback
                   </a>
@@ -172,36 +172,84 @@
         ></script>
 
         <!-- Content Start -->
-        <!-- Content End -->
-
-        <div class="bg-light">
-          <div class="container py-1">
-            <div class="row pt-5">
-              <div class="col-md-6 col-lg-3 mb-5">
-                <h3 class="font-weight-bold mb-4">BelajarKuy</h3>
-                <p class="semi-bold">
-                  Make each day a little better than before
-                </p>
-                <div class="social-icons mt-4">
-                  <a href="#"><i class="lni lni-facebook-filled"></i></a>
-                  <a href="#"><i class="lni lni-twitter-filled"></i></a>
-                  <a href="#"><i class="lni lni-instagram-filled"></i></a>
-                  <a href="#"><i class="lni lni-github-original"></i></a>
-                </div>
+        <section class="">
+          <div class="container-fluid h-custom">
+            <div
+              class="row d-flex justify-content-center align-items-center h-100"
+            >
+              <div class="col-md-9 col-lg-6 col-xl-5">
+                <img
+                  src="../assets/account/img.png"
+                  class="img-fluid"
+                  alt="Sign In Image"
+                />
+              </div>
+              <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <form
+                  action=""
+                  method="POST"
+                  name="signin-form"
+                >
+                  <div class="mb-3">
+                    <h3 class="text-center mx-3 mb-0">Login to Your Account</h3>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <label
+                      class="form-label mb-0"
+                      for="form3Example3"
+                      >Username</label
+                    >
+                    <input
+                      type="text"
+                      id="form3Example3"
+                      class="form-control form-control-lg"
+                      placeholder="Enter a valid username"
+                      name="username"
+                      required
+                    />
+                  </div>
+                  <div class="form-outline mb-3">
+                    <label
+                      class="form-label mb-0"
+                      for="form3Example4"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      id="form3Example4"
+                      class="form-control form-control-lg"
+                      placeholder="Enter password"
+                      name="password"
+                      required
+                    />
+                  </div>
+                  <div class="text-center text-lg-start mt-4 pt-2">
+                    <button
+                      type="submit"
+                      class="btn btn-success btn-lg"
+                      style="padding-left: 2.5rem; padding-right: 2.5rem"
+                      name="signin"
+                    >
+                      Sign In
+                    </button>
+                    <p class="small fw-bold mt-2 pt-1 mb-0">
+                      Don't have an account?
+                      <a
+                        href="./sign-up.html"
+                        class="link-danger btn--signup"
+                      >
+                        Sign Up
+                      </a>
+                    </p>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-        </div>
-        <div class="py-3 bg-white">
-          <div class="container">
-            <p class="m-0 text-center small medium-500">
-              Copyright &copy; BelajarKuy 2022. Made with Love &#10084;
-            </p>
-          </div>
-        </div>
+        </section>
+        <!-- Content End -->
       </div>
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
