@@ -80,6 +80,12 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Alpine.js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
 
   <body>
@@ -184,6 +190,7 @@
         <div
           class="position-relative"
           style="z-index: 1"
+          x-data="{ active: ''}"
         >
           <div class="container">
             <div class="text-center mt-3 mb-3">
@@ -217,65 +224,156 @@
             <div class="row justify-content-between text-center mt-5">
               <div
                 class="col-md-4 col-lg-3 pb-4"
-                name="search"
+                x-on:click="active = 'matematika'"
               >
-                <a
-                  href=""
-                  class="text-decoration-none"
-                >
+                <div class="text-decoration-none">
                   <div class="p-4 bg-tutor rounded">
                     <i class="fa-solid fa-calculator"></i>
                     <h6 class="font-weight-bold mb-0 pt-3">Matematika</h6>
                   </div>
-                </a>
+                </div>
               </div>
               <div
                 class="col-md-4 col-lg-3 pb-4"
-                name="search"
+                x-on:click="active = 'fisika'"
               >
-                <a
-                  href=""
-                  class="text-decoration-none"
-                >
+                <div class="text-decoration-none">
                   <div class="p-4 bg-tutor rounded">
                     <i class="fa-regular fa-lightbulb"></i>
                     <h6 class="font-weight-bold mb-0 pt-3">Fisika</h6>
                   </div>
-                </a>
+                </div>
               </div>
               <div
                 class="col-md-4 col-lg-3 pb-4"
-                name="search"
+                x-on:click="active = 'kimia'"
               >
-                <a
-                  href=""
-                  class="text-decoration-none"
-                >
+                <div class="text-decoration-none">
                   <div class="p-4 bg-tutor rounded">
                     <i class="fa-solid fa-flask-vial"></i>
                     <h6 class="font-weight-bold mb-0 pt-3">Kimia</h6>
                   </div>
-                </a>
+                </div>
               </div>
-              <div class="col-md-4 col-lg-3 pb-4">
-                <a
-                  href=""
-                  class="text-decoration-none"
-                >
+              <div
+                class="col-md-4 col-lg-3 pb-4"
+                x-on:click="active = 'biologi'"
+              >
+                <div class="text-decoration-none">
                   <div class="p-4 bg-tutor rounded">
                     <i class="fa-solid fa-dna"></i>
                     <h6 class="font-weight-bold mb-0 pt-3">Biologi</h6>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
 
             <!-- MAPEL -->
             <div class="container m-auto">
-              <div class="mt-4">
+              <!-- Matematika-->
+              <div
+                class="mt-4"
+                x-show="active === 'matematika'"
+              >
                 <div class="text-center">
                   <div class="text-primary">
-                    <h4>Soal Kimia</h4>
+                    <h4>Materi Matematika</h4>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="card col-4 mx-3 my-4 shadow">
+                    <div class="card-body">
+                      <div class="text-start mb-3">
+                        <span class="bg-info p-1 text-white rounded"
+                          >Matematika</span
+                        >
+                        <span class="bg-warning p-1 text-white rounded"
+                          >Kelas 10</span
+                        >
+                      </div>
+                      <div class="text-center">
+                        <h5
+                          class="card-title"
+                          style="height: 50px"
+                        >
+                          UTBK Soal Penalaran Matematika
+                        </h5>
+                        <div>
+                          <a
+                            href="../assets/bank-soal/matematika/UTBK Soal Penalaran Matematika.pdf"
+                            target="_blank"
+                            class="btn btn-sm btn-success mb-3"
+                            >View Online</a
+                          >
+                          <a
+                            href="../assets/bank-soal/matematika/UTBK Soal Penalaran Matematika.pdf"
+                            download=""
+                            class="btn btn-sm btn-warning"
+                            >Download</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fisika -->
+              <div
+                class="mt-4"
+                x-show="active === 'fisika'"
+              >
+                <div class="text-center">
+                  <div class="text-primary">
+                    <h4>Materi Fisika</h4>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="card col-4 mx-3 my-4 shadow">
+                    <div class="card-body">
+                      <div class="text-start mb-3">
+                        <span class="bg-info p-1 text-white rounded"
+                          >Fisika</span
+                        >
+                        <span class="bg-warning p-1 text-white rounded"
+                          >Kelas 10</span
+                        >
+                      </div>
+                      <div class="text-center">
+                        <h5
+                          class="card-title"
+                          style="height: 50px"
+                        >
+                          Paket Soal Latihan Fisika
+                        </h5>
+                        <div>
+                          <a
+                            href="../assets/bank-soal/fisika/Paket Soal Latihan Fisika.pdf"
+                            target="_blank"
+                            class="btn btn-sm btn-success mb-3"
+                            >View Online</a
+                          >
+                          <a
+                            href="../assets/bank-soal/fisika/Paket Soal Latihan Fisika.pdf"
+                            download=""
+                            class="btn btn-sm btn-warning"
+                            >Download</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Kimia -->
+              <div
+                class="mt-4"
+                x-show="active === 'kimia'"
+              >
+                <div class="text-center">
+                  <div class="text-primary">
+                    <h4>Materi Kimia</h4>
                   </div>
                 </div>
                 <div class="row justify-content-center">
@@ -286,7 +384,7 @@
                           >Kimia</span
                         >
                         <span class="bg-warning p-1 text-white rounded"
-                          >Kelas 10</span
+                          >Kelas 11</span
                         >
                       </div>
                       <div class="text-center">
@@ -298,13 +396,13 @@
                         </h5>
                         <div>
                           <a
-                            href=""
+                            href="../assets/bank-soal/kimia/Kumpulan Soal dan Jawaban Kimia I.pdf"
                             target="_blank"
                             class="btn btn-sm btn-success mb-3"
                             >View Online</a
                           >
                           <a
-                            href=""
+                            href="../assets/bank-soal/kimia/Kumpulan Soal dan Jawaban Kimia I.pdf"
                             download=""
                             class="btn btn-sm btn-warning"
                             >Download</a
@@ -332,13 +430,13 @@
                         </h5>
                         <div>
                           <a
-                            href=""
+                            href="../assets/bank-soal/kimia/Kumpulan Soal dan Jawaban Kimia II.pdf"
                             target="_blank"
                             class="btn btn-sm btn-success mb-3"
                             >View Online</a
                           >
                           <a
-                            href=""
+                            href="../assets/bank-soal/kimia/Kumpulan Soal dan Jawaban Kimia II.pdf"
                             download=""
                             class="btn btn-sm btn-warning"
                             >Download</a
@@ -354,7 +452,7 @@
                           >Kimia</span
                         >
                         <span class="bg-warning p-1 text-white rounded"
-                          >Kelas 12</span
+                          >Kelas 11</span
                         >
                       </div>
                       <div class="text-center">
@@ -366,13 +464,68 @@
                         </h5>
                         <div>
                           <a
-                            href=""
+                            href="../assets/bank-soal/kimia/Kumpulan Soal dan Jawaban Kimia III.pdf"
                             target="_blank"
                             class="btn btn-sm btn-success mb-3"
                             >View Online</a
                           >
                           <a
-                            href=""
+                            href="../assets/bank-soal/kimia/Kumpulan Soal dan Jawaban Kimia III.pdf"
+                            download=""
+                            class="btn btn-sm btn-warning"
+                            >Download</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Biologi -->
+              <div
+                class="mt-4"
+                x-show="active === 'biologi'"
+              >
+                <div class="text-center">
+                  <div class="text-primary">
+                    <h4>Materi Biologi</h4>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="card col-4 mx-3 my-4 shadow">
+                    <div class="card-body">
+                      <div class="text-start mb-3">
+                        <span class="bg-info p-1 text-white rounded"
+                          >Biologi</span
+                        >
+                        <span class="bg-warning p-1 text-white rounded"
+                          >Kelas 10</span
+                        >
+                      </div>
+                      <div class="text-center">
+                        <h5
+                          class="card-title"
+                          style="height: 50px"
+                        >
+                          Mikroorganisme
+                        </h5>
+                        <p
+                          class="card-text"
+                          style="height: 120px"
+                        >
+                          Studi tentang organisme mikroskopis, seperti bakteri,
+                          virus, dan fungi
+                        </p>
+                        <div>
+                          <a
+                            href="../assets/bank-materi/biologi/Mikroorganisme.pdf"
+                            target="_blank"
+                            class="btn btn-sm btn-success mb-3"
+                            >View Online</a
+                          >
+                          <a
+                            href="../assets/bank-materi/biologi/Mikroorganisme.pdf"
                             download=""
                             class="btn btn-sm btn-warning"
                             >Download</a
@@ -385,10 +538,10 @@
                     <div class="card-body">
                       <div class="text-start mb-3">
                         <span class="bg-info p-1 text-white rounded"
-                          >Kimia</span
+                          >Biologi</span
                         >
                         <span class="bg-warning p-1 text-white rounded"
-                          >Kelas 12</span
+                          >Kelas 11</span
                         >
                       </div>
                       <div class="text-center">
@@ -396,17 +549,25 @@
                           class="card-title"
                           style="height: 50px"
                         >
-                          Kumpulan Soal Kimia Persiapan PAS
+                          Polimer, Biokimia, dan Kimia Lingkungan
                         </h5>
+                        <p
+                          class="card-text"
+                          style="height: 120px"
+                        >
+                          Memahami dan menerapkan ilmu kimia dalam konteks yang
+                          berbeda untuk memahami polimer, kimia hayati, dan
+                          dampak lingkungan.
+                        </p>
                         <div>
                           <a
-                            href=""
+                            href="../assets/bank-materi/kimia/Polimer, Biokimia, dan Kimia Lingkungan.pdf"
                             target="_blank"
                             class="btn btn-sm btn-success mb-3"
                             >View Online</a
                           >
                           <a
-                            href=""
+                            href="../assets/bank-materi/kimia/Polimer, Biokimia, dan Kimia Lingkungan.pdf"
                             download=""
                             class="btn btn-sm btn-warning"
                             >Download</a
@@ -418,37 +579,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- SEARCH -->
-            <!-- <div class="container m-auto">
-              <div class="mt-4">
-                <div class="text-center">
-                  <div class="text-primary">
-                    <h4>Hasil Pencarian '<?= strtoupper($s) ?>'</h4>
-                  </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="card col-4 mx-3 my-4 shadow">
-                      <div class="card-body">
-                        <div class="text-start mb-3">
-                          <span class="bg-info p-1 text-white rounded"><?= $row['nama_mapel'] ?></span>
-                          <span class="bg-warning p-1 text-white rounded">Kelas <?= $row['kelas'] ?></span>
-                        </div>
-                        <div class="text-center">
-                          <h5 class="card-title" style="height: 50px;"><?= $row['nama_soal'] ?></h5>
-                          <div>
-                            <a href="../asset/banksoal/<?= $row['file_soal'] ?>" target="_blank" class="btn btn-sm btn-success mb-3">View Online</a>
-                            <a href="../asset/banksoal/<?= $row['file_soal'] ?>" download="" class="btn btn-sm btn-warning">Download</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  <?php
-                  }
-                  ?>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
 

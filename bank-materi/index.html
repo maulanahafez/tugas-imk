@@ -83,6 +83,12 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Alpine.js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
 
   <body>
@@ -194,6 +200,7 @@
         <div
           class="position-relative"
           style="z-index: 1"
+          x-data="{ active: '' }"
         >
           <div class="container">
             <div class="text-center mt-3 mb-3">
@@ -225,55 +232,59 @@
               </form>
             </div>
             <div class="row justify-content-between text-center mt-5">
-              <div class="col-md-4 col-lg-3 pb-4">
-                <a
-                  href="./?id=matematika"
-                  class="text-decoration-none"
-                >
+              <div
+                class="col-md-4 col-lg-3 pb-4"
+                x-on:click="active = 'matematika'"
+              >
+                <div class="text-decoration-none">
                   <div class="p-4 bg-tutor rounded">
                     <i class="fa-solid fa-calculator"></i>
                     <h6 class="font-weight-bold mb-0 pt-3">Matematika</h6>
                   </div>
-                </a>
+                </div>
               </div>
-              <div class="col-md-4 col-lg-3 pb-4">
-                <a
-                  href="./?id=fisika"
-                  class="text-decoration-none"
-                >
+              <div
+                class="col-md-4 col-lg-3 pb-4"
+                x-on:click="active = 'fisika'"
+              >
+                <div class="text-decoration-none">
                   <div class="p-4 bg-tutor rounded">
                     <i class="fa-regular fa-lightbulb"></i>
                     <h6 class="font-weight-bold mb-0 pt-3">Fisika</h6>
                   </div>
-                </a>
+                </div>
               </div>
-              <div class="col-md-4 col-lg-3 pb-4">
-                <a
-                  href="./?id=kimia"
-                  class="text-decoration-none"
-                >
+              <div
+                class="col-md-4 col-lg-3 pb-4"
+                x-on:click="active = 'kimia'"
+              >
+                <div class="text-decoration-none">
                   <div class="p-4 bg-tutor rounded">
                     <i class="fa-solid fa-flask-vial"></i>
                     <h6 class="font-weight-bold mb-0 pt-3">Kimia</h6>
                   </div>
-                </a>
+                </div>
               </div>
-              <div class="col-md-4 col-lg-3 pb-4">
-                <a
-                  href="./?id=biologi"
-                  class="text-decoration-none"
-                >
+              <div
+                class="col-md-4 col-lg-3 pb-4"
+                x-on:click="active = 'biologi'"
+              >
+                <div class="text-decoration-none">
                   <div class="p-4 bg-tutor rounded">
                     <i class="fa-solid fa-dna"></i>
                     <h6 class="font-weight-bold mb-0 pt-3">Biologi</h6>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
 
             <!-- MAPEL -->
             <div class="container m-auto">
-              <div class="mt-4">
+              <!-- Matematika-->
+              <div
+                class="mt-4"
+                x-show="active === 'matematika'"
+              >
                 <div class="text-center">
                   <div class="text-primary">
                     <h4>Materi Matematika</h4>
@@ -295,25 +306,24 @@
                           class="card-title"
                           style="height: 50px"
                         >
-                          Persamaan Linier Dua Variable
+                          Suku Banyak, Eksponen, dan Logaritma
                         </h5>
                         <p
                           class="card-text"
                           style="height: 120px"
                         >
-                          Sistem pertidaksamaan linear dua variabel adalah
-                          sistem yang memuat beberapa pertidaksamaan linear dua
-                          variabel.
+                          Konsep matematika yang berhubungan dengan perhitungan
+                          dan pemodelan bilangan
                         </p>
                         <div>
                           <a
-                            href="../asset/bank-materi/"
+                            href="../assets/bank-materi/matematika/Suku Banyak, Eksponen, dan Logaritma.pdf"
                             target="_blank"
                             class="btn btn-sm btn-success mb-3"
                             >View Online</a
                           >
                           <a
-                            href="../asset/bank-materi/"
+                            href="../assets/bank-materi/matematika/Suku Banyak, Eksponen, dan Logaritma.pdf"
                             download=""
                             class="btn btn-sm btn-warning"
                             >Download</a
@@ -329,7 +339,7 @@
                           >Matematika</span
                         >
                         <span class="bg-warning p-1 text-white rounded"
-                          >Kelas 10</span
+                          >Kelas 11</span
                         >
                       </div>
                       <div class="text-center">
@@ -337,25 +347,24 @@
                           class="card-title"
                           style="height: 50px"
                         >
-                          Persamaan Linier Dua Variable
+                          Trigonometri, Baris, dan Deret
                         </h5>
                         <p
                           class="card-text"
                           style="height: 120px"
                         >
-                          Sistem pertidaksamaan linear dua variabel adalah
-                          sistem yang memuat beberapa pertidaksamaan linear dua
-                          variabel.
+                          Mempelajari dan menganalisis pola serta hubungan
+                          matematika antara bilangan dan fungsi
                         </p>
                         <div>
                           <a
-                            href="../asset/bank-materi/"
+                            href="../assets/bank-materi/matematika/Trigonometri, Baris, dan Deret.pdf"
                             target="_blank"
                             class="btn btn-sm btn-success mb-3"
                             >View Online</a
                           >
                           <a
-                            href="../asset/bank-materi/"
+                            href="../assets/bank-materi/matematika/Trigonometri, Baris, dan Deret.pdf"
                             download=""
                             class="btn btn-sm btn-warning"
                             >Download</a
@@ -371,7 +380,7 @@
                           >Matematika</span
                         >
                         <span class="bg-warning p-1 text-white rounded"
-                          >Kelas 10</span
+                          >Kelas 12</span
                         >
                       </div>
                       <div class="text-center">
@@ -379,25 +388,23 @@
                           class="card-title"
                           style="height: 50px"
                         >
-                          Persamaan Linier Dua Variable
+                          Vektor dan Matriks
                         </h5>
                         <p
                           class="card-text"
                           style="height: 120px"
                         >
-                          Sistem pertidaksamaan linear dua variabel adalah
-                          sistem yang memuat beberapa pertidaksamaan linear dua
-                          variabel.
+                          Merepresentasikan dan memanipulasi kumpulan bilangan
                         </p>
                         <div>
                           <a
-                            href="../asset/bank-materi/"
+                            href="../assets/bank-materi/matematika/Vektor dan Matriks.pdf"
                             target="_blank"
                             class="btn btn-sm btn-success mb-3"
                             >View Online</a
                           >
                           <a
-                            href="../asset/bank-materi/"
+                            href="../assets/bank-materi/matematika/Vektor dan Matriks.pdf"
                             download=""
                             class="btn btn-sm btn-warning"
                             >Download</a
@@ -408,17 +415,100 @@
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- SEARCH -->
-            <!-- <div class="container m-auto">
-              <div class="mt-4">
+              <!-- Fisika -->
+              <div
+                class="mt-4"
+                x-show="active === 'fisika'"
+              >
                 <div class="text-center">
                   <div class="text-primary">
-                    <h4>Hasil Pencarian Searah</h4>
+                    <h4>Materi Fisika</h4>
                   </div>
                 </div>
                 <div class="row justify-content-center">
+                  <div class="card col-4 mx-3 my-4 shadow">
+                    <div class="card-body">
+                      <div class="text-start mb-3">
+                        <span class="bg-info p-1 text-white rounded"
+                          >Fisika</span
+                        >
+                        <span class="bg-warning p-1 text-white rounded"
+                          >Kelas 10</span
+                        >
+                      </div>
+                      <div class="text-center">
+                        <h5
+                          class="card-title"
+                          style="height: 50px"
+                        >
+                          Fluida
+                        </h5>
+                        <p
+                          class="card-text"
+                          style="height: 120px"
+                        >
+                          Cabang ilmu yang mempelajari perilaku dan sifat zat
+                          yang dapat mengalir, seperti gas dan cairan.
+                        </p>
+                        <div>
+                          <a
+                            href="../assets/bank-materi/fisika/Fluida.pdf"
+                            target="_blank"
+                            class="btn btn-sm btn-success mb-3"
+                            >View Online</a
+                          >
+                          <a
+                            href="../assets/bank-materi/fisika/Fluida.pdf"
+                            download=""
+                            class="btn btn-sm btn-warning"
+                            >Download</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card col-4 mx-3 my-4 shadow">
+                    <div class="card-body">
+                      <div class="text-start mb-3">
+                        <span class="bg-info p-1 text-white rounded"
+                          >Fisika</span
+                        >
+                        <span class="bg-warning p-1 text-white rounded"
+                          >Kelas 11</span
+                        >
+                      </div>
+                      <div class="text-center">
+                        <h5
+                          class="card-title"
+                          style="height: 50px"
+                        >
+                          Gravitasi
+                        </h5>
+                        <p
+                          class="card-text"
+                          style="height: 120px"
+                        >
+                          Fenomena tarik-menarik antara dua objek massa yang
+                          disebabkan oleh kekuatan gravitasi
+                        </p>
+                        <div>
+                          <a
+                            href="../assets/bank-materi/fisika/Gravitasi.pdf"
+                            target="_blank"
+                            class="btn btn-sm btn-success mb-3"
+                            >View Online</a
+                          >
+                          <a
+                            href="../assets/bank-materi/fisika/Gravitasi.pdf"
+                            download=""
+                            class="btn btn-sm btn-warning"
+                            >Download</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="card col-4 mx-3 my-4 shadow">
                     <div class="card-body">
                       <div class="text-start mb-3">
@@ -434,24 +524,24 @@
                           class="card-title"
                           style="height: 50px"
                         >
-                          Listrik Arus Searah
+                          Listrik Statis dan Listrik Dinamis Arus Searah
                         </h5>
                         <p
                           class="card-text"
                           style="height: 120px"
                         >
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Voluptas, incidunt.
+                          Cabang ilmu pada fisika yang mempelajari tentang
+                          muatan listrik statis dan dinamis
                         </p>
                         <div>
                           <a
-                            href="../asset/bank-materi/"
+                            href="../assets/bank-materi/fisika/Listrik Statis dan Listrik Dinamis Arus Searah.pdf"
                             target="_blank"
                             class="btn btn-sm btn-success mb-3"
                             >View Online</a
                           >
                           <a
-                            href="../asset/bank-materi/"
+                            href="../assets/bank-materi/fisika/Listrik Statis dan Listrik Dinamis Arus Searah.pdf"
                             download=""
                             class="btn btn-sm btn-warning"
                             >Download</a
@@ -462,7 +552,202 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+
+              <!-- Kimia -->
+              <div
+                class="mt-4"
+                x-show="active === 'kimia'"
+              >
+                <div class="text-center">
+                  <div class="text-primary">
+                    <h4>Materi Kimia</h4>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="card col-4 mx-3 my-4 shadow">
+                    <div class="card-body">
+                      <div class="text-start mb-3">
+                        <span class="bg-info p-1 text-white rounded"
+                          >Kimia</span
+                        >
+                        <span class="bg-warning p-1 text-white rounded"
+                          >Kelas 11</span
+                        >
+                      </div>
+                      <div class="text-center">
+                        <h5
+                          class="card-title"
+                          style="height: 50px"
+                        >
+                          Polimer, Biokimia, dan Kimia Lingkungan
+                        </h5>
+                        <p
+                          class="card-text"
+                          style="height: 120px"
+                        >
+                          Memahami dan menerapkan ilmu kimia dalam konteks yang
+                          berbeda untuk memahami polimer, kimia hayati, dan
+                          dampak lingkungan.
+                        </p>
+                        <div>
+                          <a
+                            href="../assets/bank-materi/kimia/Polimer, Biokimia, dan Kimia Lingkungan.pdf"
+                            target="_blank"
+                            class="btn btn-sm btn-success mb-3"
+                            >View Online</a
+                          >
+                          <a
+                            href="../assets/bank-materi/kimia/Polimer, Biokimia, dan Kimia Lingkungan.pdf"
+                            download=""
+                            class="btn btn-sm btn-warning"
+                            >Download</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card col-4 mx-3 my-4 shadow">
+                    <div class="card-body">
+                      <div class="text-start mb-3">
+                        <span class="bg-info p-1 text-white rounded"
+                          >Kimia</span
+                        >
+                        <span class="bg-warning p-1 text-white rounded"
+                          >Kelas 12</span
+                        >
+                      </div>
+                      <div class="text-center">
+                        <h5
+                          class="card-title"
+                          style="height: 50px"
+                        >
+                          Suhu dan Kalor
+                        </h5>
+                        <p
+                          class="card-text"
+                          style="height: 120px"
+                        >
+                          Suhu adalah derajat panas atau dingin suatu zat,
+                          sedangkan kalor adalah salah satu bentuk energi yang
+                          dapat berpindah karena perbedaan suhu
+                        </p>
+                        <div>
+                          <a
+                            href="../assets/bank-materi/kimia/Suhu dan Kalor.pdf"
+                            target="_blank"
+                            class="btn btn-sm btn-success mb-3"
+                            >View Online</a
+                          >
+                          <a
+                            href="../assets/bank-materi/kimia/Suhu dan Kalor.pdf"
+                            download=""
+                            class="btn btn-sm btn-warning"
+                            >Download</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Biologi -->
+              <div
+                class="mt-4"
+                x-show="active === 'biologi'"
+              >
+                <div class="text-center">
+                  <div class="text-primary">
+                    <h4>Materi Biologi</h4>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="card col-4 mx-3 my-4 shadow">
+                    <div class="card-body">
+                      <div class="text-start mb-3">
+                        <span class="bg-info p-1 text-white rounded"
+                          >Biologi</span
+                        >
+                        <span class="bg-warning p-1 text-white rounded"
+                          >Kelas 10</span
+                        >
+                      </div>
+                      <div class="text-center">
+                        <h5
+                          class="card-title"
+                          style="height: 50px"
+                        >
+                          Mikroorganisme
+                        </h5>
+                        <p
+                          class="card-text"
+                          style="height: 120px"
+                        >
+                          Studi tentang organisme mikroskopis, seperti bakteri,
+                          virus, dan fungi
+                        </p>
+                        <div>
+                          <a
+                            href="../assets/bank-materi/biologi/Mikroorganisme.pdf"
+                            target="_blank"
+                            class="btn btn-sm btn-success mb-3"
+                            >View Online</a
+                          >
+                          <a
+                            href="../assets/bank-materi/biologi/Mikroorganisme.pdf"
+                            download=""
+                            class="btn btn-sm btn-warning"
+                            >Download</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card col-4 mx-3 my-4 shadow">
+                    <div class="card-body">
+                      <div class="text-start mb-3">
+                        <span class="bg-info p-1 text-white rounded"
+                          >Biologi</span
+                        >
+                        <span class="bg-warning p-1 text-white rounded"
+                          >Kelas 11</span
+                        >
+                      </div>
+                      <div class="text-center">
+                        <h5
+                          class="card-title"
+                          style="height: 50px"
+                        >
+                          Polimer, Biokimia, dan Kimia Lingkungan
+                        </h5>
+                        <p
+                          class="card-text"
+                          style="height: 120px"
+                        >
+                          Memahami dan menerapkan ilmu kimia dalam konteks yang
+                          berbeda untuk memahami polimer, kimia hayati, dan
+                          dampak lingkungan.
+                        </p>
+                        <div>
+                          <a
+                            href="../assets/bank-materi/kimia/Polimer, Biokimia, dan Kimia Lingkungan.pdf"
+                            target="_blank"
+                            class="btn btn-sm btn-success mb-3"
+                            >View Online</a
+                          >
+                          <a
+                            href="../assets/bank-materi/kimia/Polimer, Biokimia, dan Kimia Lingkungan.pdf"
+                            download=""
+                            class="btn btn-sm btn-warning"
+                            >Download</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Content End -->
